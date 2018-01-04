@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Form Processing</title>
+		
+		<script>
+			function greet(){
+				var first_name, last_name, full_name;
+				
+				first_name= document.name.firstName.value;
+				last_name= document.name.lastName.value;
+				
+				full_name= first_name +" "+last_name;
+				alert("Hey, "+full_name +"!");
+			
+			}
+			function viewName(){
+				var first_name, last_name, full_name;
+				
+				first_name= document.name.firstName.value;
+				last_name= document.name.lastName.value;
+				full_name= first_name+" "+last_name;
+				
+				document.name.fullName.value = full_name;
+				//document.name.fullName.select(); highlights text
+				//document.name.fullName.focus(); moves cursor focus
+			}
+			function doMath(){
+				var first_number, second_number, answer;
+				first_number= parseFloat("2.2");
+				second_number= parseFloat(document.math.secondNumber.value);
+				
+				answer= first_number + second_number;
+				
+				document.math.result.value= answer;
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<form name="name" id="name" method="get" action="#">
+			
+			<p>
+				<label for="firstName">First Name: </label>
+				<input type="text" name="firstName" id="firstName"><br>
+				<label for="lastName">Last Name: </label>
+				<input type="text" name="lastName" id="lastName">
+			</p>
+			<p>
+				<input type="button" value="Greet" name="greetButton" id="greetButton" onclick="greet();">
+				<input type="button" value="View Name" name="viewButton" id="viewButton" onclick="viewName();">
+			</p>
+			<p>
+				<label for="fullName">Full Name: </label>
+				<input type="text" name="fullName" id="fullName">
+			</p>
+			
+		</form>
+		
+		<hr>
+		
+		<form name="math" id="math" method="get" action="#">
+			<p>
+				<label for="firstNumber">First Number: </label>
+				<input type="text" name="firstNumber" id="firstNumber">
+				<label for="secondNumber">Second Number: </label>
+				<input type="text" name="secondNumber" id="secondNumber">
+			</p>
+			<p>
+				<input type="button" value="Do Math" name="mathbutton" id="mathbutton" onclick="doMath();">
+			</p>
+			<p>
+				<label for="result">Result: </label>
+				<input type="text" name="result" id="result">
+			</p>
+			
+		</form>
+	</body>
+</html>

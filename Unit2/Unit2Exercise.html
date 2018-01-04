@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Manage Subscriptions</title>
+		<meta charset="utf-8">
+		<style>
+			th {
+				background-color: #2b3e85;
+				color: white;
+			}
+			tr:nth-child(even){
+				background-color: lightgrey;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>Manage Subscriptions</h1>
+			<form id="subscription" name="subscription" method="get" action="#">	
+				<table>
+					<tr>
+						<th>Newsletter</th>
+						<th>Action</th>
+					</tr>
+					<tr>
+						<td>Athletics</td>
+						<td>
+							<input type="radio" name="athletics" id="subscribe" value="subscribe">Subscribe<br>
+							<input type="radio" name="athletics" id="unsubscribe" value="unsubscribe">Unsubscribe
+						</td>
+					</tr>
+					<tr>
+						<td>Films</td>
+						<td>
+							<input type="radio" name="films" id="subscribe" value="subscribe">Subscribe<br>
+							<input type="radio" name="films" id="unsubscribe" value="unsubscribe">Unsubscribe
+						</td>
+					</tr>
+					<tr>
+						<td>Campus News</td>
+						<td>
+							<input type="radio" name="campnews" id="subscribe" value="subscribe">Subscribe<br>
+							<input type="radio" name="campnews" id="unsubscribe" value="unsubscribe">Unsubscribe
+						</td>
+					</tr>
+				</table>
+				<input type="button" id="update" value="Update">
+			</form>
+	</body>
+</html>

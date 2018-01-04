@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Radio</title>
+    <meta charset="utf-8">
+	<script>
+		function whichRadio(){
+			if (document.getElementById("daisy").checked==true){
+				alert("Daisy is checked.");
+			} else if (document.getElementById("orchid").checked==true){
+				alert("Orchid is checked.");
+			} else if (document.getElementById("peony").checked==true){
+				alert("Peony is checked.");
+			}
+		}
+	</script>
+  </head>
+  <body>
+    <form name="flowers" id="flowers" action="#" method="get">
+      <p><input type="radio" name="flowerType" id="daisy" value="daisy" checked> Daisy<br>
+      <input type="radio" name="flowerType" id="orchid" value="orchid"> Orchid<br>
+      <input type="radio" name="flowerType" id="peony" value="peony"> Peony</p>
+      <p><input type="button" name="checkRadio" id="checkRadio" value="Which Radio?" onclick="whichRadio();"></p>
+    </form>
+  </body>
+</html>

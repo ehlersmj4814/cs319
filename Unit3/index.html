@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Intro to JavaScript</title>
+	</head>
+	
+	<body>
+		
+		<script>
+			//These are our hello alerts
+			//window.alert("Hello World!");
+			//alert("Hello again!");
+			
+			var first_name;
+			first_name = "Matt";
+			//window.alert(first_name);
+			//document.write(first_name);
+			//console.log(first_name);
+			
+			var current_year;
+			current_year = 2016;
+			//document.write("Learning JavaScript in " + current_year + " is a great idea!");
+			
+			var having_fun;
+			having_fun = true;
+			//console.log("Are we having fun writing JavaScript? " + having_fun);
+			
+			function doSomeMath(){
+				
+				var x;
+				var y;
+				var answer;
+				x = 3;
+				y = 5;
+				answer = x * y;
+				
+				document.write("The answer of " + x + " * " + y + " is " + answer);
+				
+			}
+			
+			function doSomeMoreMath(first_number, second_number){
+				//Declare variables
+				var x;
+				var y;
+				var answer;
+				
+				//Assign Values
+				x = first_number;
+				y = second_number;
+				//Do computation
+				answer = x*y;
+				
+				//Show outputs
+				//document.write("<p>The answer of "+x+" * "+y+" is "+answer+"<p>");
+				document.getElementById("math").innerHTML = "The answer of "+x+" * "+y+" is "+answer;
+			}
+			
+		</script>
+		
+		<p id="math"></p>
+		<input type="button" onclick="doSomeMath();" value="Do math!">
+		<input type="button" onclick="doSomeMoreMath(500,10);" value="Do more math!">
+	</body>
+
+</html>

@@ -1,0 +1,10 @@
+Core Web Languages:
+ 1. HTML: HyperText Markup Language
+ 2. CSS: Cascading Style Sheets
+ 3. JavaScript (Client-side programming)
+ (4. PHP (Server-side Programming))
+
+Why web apps?
+ 1. Accessibility and usability
+ 2. Very basic => very robust
+  

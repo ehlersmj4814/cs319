@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Email Address Validation</title>
+		<meta charset="utf-8">
+		<script>
+			function validate(){
+				var email = document.getElementById("emailAddr");
+				//alert(email);
+				if (email.value == ""){
+					alert("This is not a valid email address");
+					email.focus();
+					return false;
+				} else if (email.value.indexOf("@") <= 0){
+					alert("This is not a valid email address");
+					email.select();
+					return false;
+				} else if (email.value.indexOf(".") <= 3 || email.value.indexOf(".") == -1){
+					alert("This is not a valid email address");
+					email.select();
+					return false;
+				
+				} else{
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="val" id="val" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return validate();">
+			<p>Email: <input type="text" name="emailAddr" id="emailAddr"></p>
+			<p><input type="submit" name="submit" id="submit"></p>
+		</form>
+		
+		<script>
+			var counter = 0;
+			while (counter < 10 ){
+				document.write("<p>This is run number "+counter+"</p>");
+				counter = counter+1;
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Matt Ehlers and Bret Bender -->
+		<title>Unit 6 Exercise</title>
+		<meta charset="utf-8">
+		<script>
+			function guessNumber(){
+				var answer = 2;
+				var user_guess = document.getElementById("userGuess").value.trim();
+				if (user_guess == ""){
+					alert("Please enter a number.");
+					return false;
+				} else if (user_guess < 1 || user_guess > 10){
+					alert("Your guess is not in the range 1-10!");
+					return false;
+				} else if (user_guess > answer){
+					alert("You are too high.");
+					return false;
+				} else if (user_guess < answer){
+					alert("You are too low.");
+					return false;
+				} else if(user_guess == answer){
+					alert("You are correct!");
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="guess" name="guess" action="#" method="get" onsubmit="return guessNumber();">
+			Number Guess: <input type="number" id="userGuess" name="userGuess"><br>
+			<input type="submit" id="submit" name="submit">
+		</form>
+	</body>
+</html>

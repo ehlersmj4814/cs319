@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>jQuery</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="toClick">Click Here</div>
+		<hr>
+		<div id="slide">This text is in a div that allows jQuery to slide up and down</div>
+		<br>
+		<input type="button" id="btnSlideUp" name="btnSlideUp" value="Slide Up">
+		<input type="button" id="btnSlideDown" name="btnSlideDown" value="Slide Down">
+		<input type="button" id="btnSlideToggle" name="btnSlideToggle" value="Slide Toggle">
+		<br>
+		<hr>
+		<div id="fade">This text is in a div that allows jQuery to fade in and out</div>
+		<br>
+		<input type="button" id="btnFadeIn" name="btnFadeIn" value="Fade In">
+		<input type="button" id="btnFadeOut" name="btnFadeOut" value="Fade Out">
+		
+		
+		<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script>
+			//$(document).ready(function(){
+			//	alert("Hello");
+			//});
+			$("#toClick").click(function(){
+				alert("Hi");
+			});
+			$("#btnSlideUp").click(function(){
+				$("#slide").slideUp("slow");
+			});
+			$("#btnSlideDown").click(function(){
+				$("#slide").slideDown("slow");
+			});
+			$("#btnSlideToggle").click(function(){
+				$("#slide").slideToggle("fast");
+			});
+			$("#btnFadeIn").click(function(){
+				$("#fade").fadeIn("slow");
+			});
+			$("#btnFadeOut").click(function(){
+				$("#fade").fadeOut("slow");
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fade</title>
+    <meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script>
+		$("#image").ready(function(){
+			$("#pumpkin").hover(function(){
+				$("#image")
+				  .fadeOut("slow")
+				  .fadeIn("slow");
+			});
+		});
+	</script>
+  </head>
+  <body>
+	<div id="image"><img src="pumpkin.jpg" id="pumpkin"></div>
+  </body>
+</html>

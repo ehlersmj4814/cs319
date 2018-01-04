@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Form Validation 2.0</title>
+		<meta charset="utf-8">
+		<script>
+			function formValidate(){
+				//alert("form");
+				var first_name = document.getElementById("firstName");
+				//alert(first_name.value);
+				var last_name = document.getElementById("lastName");
+				var email_address = document.getElementById("email");
+				var age = document.getElementById("age");
+				if (first_name.value == "") {
+					alert("Please Enter First Name");
+					first_name.focus();
+					return false;
+				} else if (last_name.value == "") {
+					alert("Please Enter Last Name");
+					last_name.focus();
+					return false;
+				} else if (email_address.value == "") {
+					alert("Please Enter Email Address");
+					email_address.focus();
+					return false;
+				} else if (email_address.value.endsWith("@uwec.edu") == false){
+					alert("Not a valid email address");
+					email_address.focus();
+					return false;
+				} else if (age.value == ""){
+					alert("Please enter your age.");
+					age.focus();
+					return false;
+				} else if (age.value <= 18){
+					alert("You are underage.");
+					age.focus();
+					return false;
+				} else{
+				first_name.trim();
+				last_name.trim();
+				email_address.trim();
+				return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="nameValidate" name="nameValidate" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+			First Name: <input type="text" id="firstName" name="firstName"><br>
+			Last Name: <input type="text" id="lastName" name="lastName"><br>
+			Email Address: <input type="text" id="email" name="email"><br>
+			Age: <input type="number" id="age" name="age"><br>
+			<input type="submit" id="submit" name="submit">
+		</form>
+	</body>
+</html>

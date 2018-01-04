@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>jQuery Month</title>
+		<h1>jQuery Months</h1>
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>	
+	</head>
+	<body>a0
+		<form id="month" name="month" method="get" action="#">
+			<div id="error" style="color:red;"></div>
+			<p>Month Number:<input type="text" id="monthNum" name="monthNum"></p>
+			<p>Month Name: <span id="monthName"></span></p>
+			<p><input type="button" id="go" name="go" value="Go!"></p>
+		</form>
+	</body>
+	<script>
+			$("#monthNum").ready(function(){0
+				$("#monthNum").focus();
+			});
+			$("#go").click(function(){
+				$month = $("#monthNum").val();
+				if ($month == ""){
+					$("#error").text("Please enter the numeric value of a month.").show();
+					$("#monthNum").focus();
+					$("#monthName").text("");
+				}else if($.isNumeric($month) == false){
+					$("#error").text("Please enter a numeric value of a month.").show();
+					$("#monthName").text("");
+					$("#monthNum").select();
+				}else if($month >12 || $month <1){
+					$("#error").text("Please enter a numeric value of a month.").show();
+					$("#monthName").text("");
+					$("#monthNum").select();
+				}else if($month == "1"){
+					$("#error").text("").hide();
+					$("#monthName").text("January");
+				}else if($month == "2"){
+					$("#error").text("").hide();
+					$("#monthName").text("February");
+				}else if($month == "3"){
+					$("#error").text("").hide();
+					$("#monthName").text("March");
+				}else if($month == "4"){
+					$("#error").text("").hide();
+					$("#monthName").text("April");
+				}else if($month == "5"){
+					$("#error").text("").hide();
+					$("#monthName").text("May");
+				}else if($month == "6"){
+					$("#error").text("").hide();
+					$("#monthName").text("June");
+				}else if($month == "7"){
+					$("#error").text("").hide();
+					$("#monthName").text("July");
+				}else if($month == "8"){
+					$("#error").text("").hide();
+					$("#monthName").text("August");
+				}else if($month == "9"){
+					$("#error").text("").hide();
+					$("#monthName").text("September");
+				}else if($month == "10"){
+					$("#error").text("").hide();
+					$("#monthName").text("October");
+				}else if($month == "11"){
+					$("#error").text("").hide();
+					$("#monthName").text("November");
+				}else if($month == "12"){
+					$("#error").text("").hide();
+					$("#monthName").text("December");
+				}
+			});
+		</script>
+</html>

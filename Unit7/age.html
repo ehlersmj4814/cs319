@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Age</title>
+    <meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+	<form name="checkAge" id="checkAge" action="#" method="get">
+		<p>How old are you?<br>
+		<div id="notice" style="color:red;"></div>
+		<input type="text" name="age" id="age"></p>
+		<p><input type="submit" name="submit" id="submit" value="Submit"></p>
+	</form>
+	<script>
+		//$(document).ready(function() {
+		//  alert("Hello");
+		//});
+		$("form").submit(function() {
+			if ($("#age").val() == ""){
+				//alert("Age input is empty.");
+				$("#notice").text("Please enter your age.").show();
+				$("#age").focus();
+				return false;
+			} else{
+				alert("Age input is not empty");
+				return true;
+			}
+		});
+		$("#notice").hover(function() {
+			$("#notice").fadeOut("slow");
+		});
+  </script>
+  </body>
+</html>

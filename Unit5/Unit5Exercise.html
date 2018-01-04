@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Months</title>
+		<meta charset="utf-8">
+		<script>
+			function getMonth(){
+				var month_num = document.month.monthNum.value;
+				if (month_num == 1) {
+					alert("January");
+					return true;
+				} else if (month_num == 2) {
+					alert("February");
+					return true;
+				} else if (month_num == 3) {
+					alert("March");
+					return true;
+				} else if (month_num == 4) {
+					alert("April");
+					return true;
+				} else if (month_num == 5) {
+					alert("May");
+					return true;
+				} else if (month_num == 6) {
+					alert("June");
+					return true;
+				} else if (month_num == 7) {
+					alert("July");
+					return true;
+				} else if (month_num == 8) {
+					alert("August");
+					return true;
+				} else if (month_num == 9) {
+					alert("September");
+					return true;
+				} else if (month_num == 10) {
+					alert("October");
+					return true;
+				} else if (month_num == 11) {
+					alert("November");
+					return true;
+				} else if (month_num == 12) {
+					alert("December");
+					return true;
+				} else {
+					alert("I don't think that number corresponds to a month.");
+					document.month.monthNum.select();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Months</h1>
+		<form id="month" name="month" action="#" method="get" onsubmit="return getMonth();">
+			<p>Month Number: <input type="number" id="monthNum" name="monthNum"></p>
+			<p><input type="submit" id="submit" name="submit" value="Submit"></p>
+		</form>
+	</body>
+</html>

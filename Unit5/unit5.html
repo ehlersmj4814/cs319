@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Unit 5</title>
+		<meta charset="utf-8">
+		<script>
+			function  nameProcessing() {
+				var first_name = document.unit5.firstName.value.trim();
+				var last_name = document.unit5.lastName.value.trim();
+				var full_name;
+				if (first_name == "" || last_name == "") {
+					alert("First or Last names are blank");
+					
+				} else if (last_name == ""){
+					alert("Please enter last name");
+				}
+				full_name = first_name +" "+ last_name;
+				document.unit5.fullName.value = full_name;
+			}
+		</script>
+	</head>
+	<body>
+		<form id="unit5" name="unit5" action="#" method"get">
+			<p>First Name: <input type="text" id="firstName" name="firstName"></p>
+			<p>Last Name: <input type="text" id="lastName" name="lastName"></p>
+			<p><input type="button" id="go" name="go" value="Go" onclick="nameProcessing();"></p>
+			<p>Full Name: <input type="text" id="fullName" name="fullName"></p>
+			<p id="otherName"> </p>
+		</form>
+	</body>
+</html>

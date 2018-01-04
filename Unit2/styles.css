@@ -1,0 +1,46 @@
+/* Applying CSS
+ 1. Inline
+ 2. Internal
+ 3. External **Preferred
+ 
+ Selectors
+  1. Tag
+  2. ID
+  3. Class
+  
+ Sizing
+  1. Fixed
+  2. Relative
+  
+ Reasonable breakpoints
+  Phone: <768px
+  Tablets: >=768px
+  Small Laptop: >=992px
+  Full display: >=1200px
+ */
+
+@media only screen and (max-width: 767px) {
+	 body{
+		 font-family: Times, serif;
+	 }
+	 #subtitle {
+		 font-variant: small-caps;
+	 }
+	 .maintext {
+		 font-size: 0.5em
+	 }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+ 
+	 body {
+		 font-family: Helvetica, sans-serif;
+	 }
+
+	#subtitle {
+		font-variant: small-caps; 
+	}
+
+	.maintext {
+		font-size: 2.0em;
+    }
+}

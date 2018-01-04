@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<p id="output"></p>
+		<form id="calculator" name="calculator" action="#" method="get">
+			<input type="button" id="add" name="add" onclick="Add(10, 10);" value="Add">
+			<input type="button" id="subtract" name="subtract" onclick="Subtract(11, 10);" value="Subtract">
+			<input type="button" id="multiply" name="multiply" onclick="Multiply(2, 2);" value="Multiply">
+			<input type="button" id="divide" name="divide" onclick="Divide(4, 4);" value="Divide">
+		</form>
+		<script>
+			//Declare variables
+			var x;
+			var y;
+			var answer;
+			
+			function Add(first_number, second_number){
+				//Assign variables
+				x = first_number;
+				y = second_number;
+				
+				//Computation
+				answer = x+y;
+				
+				//Show outputs
+				document.getElementById("output").innerHTML =x+" plus "+y+" equals "+answer+"!";
+			}
+			function Subtract(first_number, second_number){
+				//Assign variables
+				x = first_number;
+				y = second_number;
+				
+				//Computation
+				answer = x-y;
+				
+				//Show outputs
+				document.getElementById("output").innerHTML =x+" minus "+y+" equals "+answer+"!";
+			}
+			function Multiply(first_number, second_number){
+				//Assign variables
+				x = first_number;
+				y = second_number;
+				
+				//Computation
+				answer = x*y;
+				
+				//Show outputs
+				document.getElementById("output").innerHTML =x+" times "+y+" equals "+answer+"!";
+			}
+			function Divide(first_number, second_number){
+				//Assign variables
+				x = first_number;
+				y = second_number;
+				
+				//Computation
+				answer = x/y;
+				
+				//Show outputs
+				document.getElementById("output").innerHTML =x+" divided by "+y+" equals "+answer+"!";
+			}
+		</script>
+		
+	</body>
+</html>
